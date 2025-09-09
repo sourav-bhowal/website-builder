@@ -1,1 +1,24 @@
-{"/":{"root":{"props":{"title":""}},"content":[{"type":"Hero","props":{"title":"Welcome to Our Website","subtitle":"Create amazing experiences with our platform","backgroundImage":"https://via.placeholder.com/1920x800","overlayColor":"#000000","overlayOpacity":0.4,"textColor":"#ffffff","buttonText":"Get Started","buttonLink":"#","height":600,"id":"Hero-1173b80f-8077-4cf2-8875-8a068a5d7122"}},{"type":"HeadingBlock","props":{"title":"Edit this page by adding /edit to the end of the URL","id":"HeadingBlock-1694032984497","color":"#ef4444","fontWeight":"bold","textAlign":"center"}},{"type":"GridContainer","props":{"columns":3,"gap":12,"items":[{"content":"Grid Item 1trrrrrrrrrrrrrr","backgroundColor":"#f0f0f0","textColor":"#db1818","padding":20,"textAlignment":"center"},{"content":"Grid Item 2","backgroundColor":"#e0e0e0","textColor":"#000","padding":20,"textAlignment":"center"},{"content":"Grid Item 3","backgroundColor":"#d0d0d0","textColor":"#000","padding":20,"textAlignment":"center"}],"id":"GridContainer-feb37721-5663-48e1-8b5a-242ef9349ecd"}},{"type":"Container","props":{"backgroundColor":"#f8f9fa","padding":30,"borderRadius":12,"alignment":"center","shadow":"soft","borderWidth":0,"borderColor":"#e0e0e0","id":"Container-42b62c20-0739-4f37-99c7-a32dc2569150"}},{"type":"Spacer","props":{"height":40,"id":"Spacer-9c05d5bb-a457-4ccf-8d4e-2d71f9673fd2"}},{"type":"Radio","props":{"textAlign":"right","id":"Radio-5eb74bb1-24f1-4686-a163-e78479813f51"}},{"type":"ContactForm","props":{"title":"Contact Us","fields":[{"label":"Name","type":"text","required":true},{"label":"Email","type":"email","required":true},{"type":"textarea"}],"buttonText":"Send Message","backgroundColor":"#f9fafb","textColor":"#000000","id":"ContactForm-60e9f26f-e064-4869-82c7-367882c3114e"}},{"type":"Spacer","props":{"height":40,"id":"Spacer-a9562432-43b1-45ef-aa3b-82665546733a"}},{"type":"Image","props":{"src":"https://th.bing.com/th/id/OIP.vns8Fgn9x5aqaZoNKiY-pQHaEH?w=283&h=180&c=7&r=0&o=7&pid=1.7&rm=3","alt":"Placeholder image","width":432,"height":200,"alignment":"left","id":"Image-c0cc4393-2e01-4498-b3e0-a7c8a519afe8"}}],"zones":{}},"/puck":{"root":{"props":{}},"content":[{"type":"Hero","props":{"title":"Welcome to Our Website","subtitle":"Create amazing experiences with our platform","backgroundImage":"https://via.placeholder.com/1920x800","overlayColor":"#000000","overlayOpacity":0.4,"textColor":"#ffffff","buttonText":"Get Started","buttonLink":"#","height":600,"id":"Hero-58c8f349-2b58-4f57-ae32-09f2382db237"}}],"zones":{}}}
+{
+  "/": { "root": { "props": { "title": "" } }, "content": [], "zones": {} },
+  "/puck": {
+    "root": { "props": {} },
+    "content": [
+      {
+        "type": "Hero",
+        "props": {
+          "title": "Welcome to Our Website",
+          "subtitle": "Create amazing experiences with our platform",
+          "backgroundImage": "https://via.placeholder.com/1920x800",
+          "overlayColor": "#000000",
+          "overlayOpacity": 0.4,
+          "textColor": "#ffffff",
+          "buttonText": "Get Started",
+          "buttonLink": "#",
+          "height": 600,
+          "id": "Hero-58c8f349-2b58-4f57-ae32-09f2382db237"
+        }
+      }
+    ],
+    "zones": {}
+  }
+}
