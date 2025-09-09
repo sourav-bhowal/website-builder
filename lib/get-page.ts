@@ -1,11 +1,7 @@
 import { Data } from "@measured/puck";
-import fs from "fs";
+import { dbService } from "./database";
 
-// Replace with call to your database
-export const getPage = (path: string) => {
-  const allData: Record<string, Data> | null = fs.existsSync("database.json")
-    ? JSON.parse(fs.readFileSync("database.json", "utf-8"))
-    : null;
-
-  return allData ? allData[path] : null;
+// Get page data from MongoDB
+export const getPage = async (path: string): Promise<Data | null> => {
+  return await dbService.getPage(path);
 };

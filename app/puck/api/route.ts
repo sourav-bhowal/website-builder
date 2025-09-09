@@ -1,25 +1,29 @@
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
-import fs from "fs";
+import { dbService } from "@/lib/database";
 
 export async function POST(request: Request) {
-  const payload = await request.json();
+  try {
+    const payload = await request.json();
 
-  const existingData = JSON.parse(
-    fs.existsSync("database.json")
-      ? fs.readFileSync("database.json", "utf-8")
-      : "{}"
-  );
+    const success = await dbService.savePage(payload.path, payload.data);
 
-  const updatedData = {
-    ...existingData,
-    [payload.path]: payload.data,
-  };
+    if (!success) {
+      return NextResponse.json(
+        { error: "Failed to save page" },
+        { status: 500 }
+      );
+    }
 
-  fs.writeFileSync("database.json", JSON.stringify(updatedData));
+    // Purge Next.js cache
+    revalidatePath(payload.path);
 
-  // Purge Next.js cache
-  revalidatePath(payload.path);
-
-  return NextResponse.json({ status: "ok" });
+    return NextResponse.json({ status: "ok" });
+  } catch (error) {
+    console.error("Error saving page:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
 }
