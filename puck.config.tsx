@@ -1,5 +1,14 @@
 import type { Config } from "@measured/puck";
-import { applyThemeToElement, getTheme } from "./lib/themes";
+import { ColorPicker } from "./components/ui/color-picker";
+
+// Color picker field component for Puck
+const ColorPickerField = ({ value, onChange }: { value: string; onChange: (value: string) => void }) => (
+  <ColorPicker
+    value={value || "#000000"}
+    onChange={onChange}
+    className="w-full"
+  />
+);
 
 // Enhanced color palette with theme integration
 const colorPalette = [
@@ -243,8 +252,8 @@ export const config: Config<Props> = {
           ],
         },
         color: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textAlign: {
           type: "radio",
@@ -290,8 +299,8 @@ export const config: Config<Props> = {
           ],
         },
         color: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textAlign: {
           type: "radio",
@@ -334,12 +343,12 @@ export const config: Config<Props> = {
           arrayFields: {
             content: { type: "textarea" },
             backgroundColor: {
-              type: "select",
-              options: backgroundColorPalette,
+              type: "custom",
+              render: ColorPickerField,
             },
             textColor: {
-              type: "select",
-              options: colorPalette,
+              type: "custom",
+              render: ColorPickerField,
             },
             padding: { type: "number" },
             textAlignment: {
@@ -420,12 +429,12 @@ export const config: Config<Props> = {
       fields: {
         text: { type: "text" },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         fontSize: { type: "number" },
         padding: { type: "number" },
@@ -531,8 +540,8 @@ export const config: Config<Props> = {
     Container: {
       fields: {
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         padding: { type: "number" },
         borderRadius: { type: "number" },
@@ -555,8 +564,8 @@ export const config: Config<Props> = {
         },
         borderWidth: { type: "number" },
         borderColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
       },
       defaultProps: {
@@ -652,13 +661,13 @@ export const config: Config<Props> = {
         subtitle: { type: "textarea" },
         backgroundImage: { type: "text" },
         overlayColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         overlayOpacity: { type: "number" },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         buttonText: { type: "text" },
         buttonLink: { type: "text" },
@@ -764,12 +773,12 @@ export const config: Config<Props> = {
           },
         },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         sticky: {
           type: "radio",
@@ -858,12 +867,12 @@ export const config: Config<Props> = {
     Footer: {
       fields: {
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         columns: {
           type: "array",
@@ -992,12 +1001,12 @@ export const config: Config<Props> = {
         buttonText: { type: "text" },
         buttonLink: { type: "text" },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         shadow: {
           type: "select",
@@ -1200,12 +1209,12 @@ export const config: Config<Props> = {
         },
         buttonText: { type: "text" },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
       },
       defaultProps: {
@@ -1309,12 +1318,12 @@ export const config: Config<Props> = {
         position: { type: "text" },
         avatar: { type: "text" },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
       },
       defaultProps: {
@@ -1396,12 +1405,12 @@ export const config: Config<Props> = {
           },
         },
         backgroundColor: {
-          type: "select",
-          options: backgroundColorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
         textColor: {
-          type: "select",
-          options: colorPalette,
+          type: "custom",
+          render: ColorPickerField,
         },
       },
       defaultProps: {
