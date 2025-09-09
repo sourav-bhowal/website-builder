@@ -10,16 +10,31 @@
   },
   "dependencies": {
     "@measured/puck": "^0.20.2",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "class-variance-authority": "^0.7.0",
     "classnames": "^2.3.2",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.543.0",
     "next": "^15.2.4",
+    "next-themes": "^0.2.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.16",
     "eslint-config-custom": "*",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.5.4"
   }
 }
